@@ -3,15 +3,7 @@ require "pry"
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
   # This initializes pigeon_list with all names
-  data.each do |attribute, specific|
-    specific.each do |detail, names|
-      if attribute == :gender
-        names.each do |name|
-          pigeon_list[name] = {}
-        end
-      end
-    end
-  end
+  pigeon_data[:gender].values.flatten.each do {|name| pigeon_list[name] = {} }
   # Now pigeon_list will be populated
   data.each do |attribute, specific|
     specific.each do |detail, names|
