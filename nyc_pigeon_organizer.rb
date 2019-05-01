@@ -16,7 +16,6 @@ def nyc_pigeon_organizer(data)
   data.each do |attribute, specific|
     specific.each do |detail, names|
       names.each do |name|
-        binding.pry
         if pigeon_list[name][attribute].nil?
           pigeon_list[name][attribute] = []
         end
